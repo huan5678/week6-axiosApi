@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>let's Travel</title>
+    <meta name="description" content="@let's Travel">
+    <meta name="description" content="let's Travel是 OOO 旗下的紀錄旅遊票券的平台">
+    <meta property="og:title" content="let's Travel" />
+    <meta property="og:description" content="let's Travel是 OOO 旗下的紀錄旅遊票券的平台">
+    <meta property="og:image" content="https://picsum.photos/500/300" />
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+  </head>
+  <body>
+    <div class="container pt-[7.5rem] pb-[6.25rem]">
+        <div class="flex flex-col lg:flex-row justify-center items-center py-[60px] gap bg-white shadow rounded-xl w-10/12 mx-auto">
+          <div class="flex flex-row lg:flex-col lg:w-1/2 lg:max-w-[350px]">
+            <picture>
+              <source media="(min-width:768px)" srcset="./src/images/undraw_Traveling_re_weve.png">
+              <img src="./src/images/undraw_Traveling_re_weve@2x.png" alt="heroImage">
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="./src/images/Let’s Travel !.png">
+              <img src="./src/images/Let’s Travel !@2x.png" alt="heroTitleImage">
+            </picture>
+          </div>
+          <div class="w-full px-8 lg:px-0 lg:w-1/2 lg:max-w-[350px]">
+            <form action="" class="w-full" id="ticketForm">
+            <h2 class="text-primary text-2xl border-b-[3px] border-primary mb-8 pb-1 font-bold">
+              <i class="bi bi-plus-circle text-xl"></i>
+              新增旅遊套票
+            </h2>
+            <div class="space-y-4 mb-6">
+              <fieldset class="w-full flex justify-between items-center">
+                <label for="ticketName" class="text-primary">套票名稱</label>
+                <input type="text" id="ticketName" name="ticketName" class="form-input border-0 border-b bg-gray-light text-gray border-primary pb-1 focus:ring-transparent focus:border-b-primary-dark focus:border-b-2 rounded-t w-[70%] py-2 pl-3" placeholder="請填寫套票名稱" required />
+              </fieldset>
+              <fieldset class="w-full flex justify-between items-center">
+                <label for="imgUrl" class="text-primary">圖片網址</label>
+                <input type="text" id="imgUrl" name="imgUrl" class="form-input border-0 border-b bg-gray-light text-gray border-primary pb-1 focus:ring-transparent focus:border-b-primary-dark focus:border-b-2 rounded-t w-[70%] py-2 pl-3" placeholder="請填寫圖片網址" required />
+              </fieldset>
+              <fieldset class="w-full flex justify-between items-center relative">
+                <label for="attractions" class="text-primary">景點地區</label>
+                  <select name="attractions" id="attractions" autocomplete="off" class="border-0 border-b bg-gray-light text-gray border-primary pb-1 focus:ring-transparent focus:border-b-primary-dark focus:border-b-2 rounded-t w-[70%] py-2 pl-3" required>
+                    <option value="" disabled selected>請選擇景點地區</option>
+                    <option value="台北">台北</option>
+                    <option value="台中">台中</option>
+                    <option value="高雄">高雄</option>
+                  </select>
+              </fieldset>
+              <fieldset class="w-full flex justify-between items-center">
+                <label for="ticketPrice" class="text-primary">套票金額</label>
+                <input type="text" id="ticketPrice" name="ticketPrice" min="0" class="form-input border-0 border-b bg-gray-light text-gray border-primary pb-1 focus:ring-transparent focus:border-b-primary-dark focus:border-b-2 rounded-t w-[70%] py-2 pl-3" placeholder="請填寫套票金額" required />
+              </fieldset>
+              <fieldset class="w-full flex justify-between items-center">
+                <label for="ticketAmount" class="text-primary">套票組數</label>
+                <input type="number" id="ticketAmount" name="ticketAmount" min="0" class="form-input border-0 border-b bg-gray-light text-gray border-primary pb-1 focus:ring-transparent focus:border-b-primary-dark focus:border-b-2 rounded-t w-[70%] py-2 pl-3" placeholder="請填寫套票組數" required />
+              </fieldset>
+              <fieldset class="w-full flex justify-between items-center">
+                <label for="ticketRate" class="text-primary">套票星級</label>
+                <input type="number" id="ticketRate" name="ticketRate" min="0" max="10" class="form-input border-0 border-b bg-gray-light text-gray border-primary pb-1 focus:ring-transparent focus:border-b-primary-dark focus:border-b-2 rounded-t w-[70%] py-2 pl-3" placeholder="請填寫套票星級" />
+              </fieldset>
+              <fieldset class="w-full flex justify-between items-start">
+                <label for="ticketDesc" class="text-primary pt-2">套票描述</label>
+                <textarea name="ticketDesc" id="ticketDesc" rows="4" maxlength="100" class="form-input border-0 border-b bg-gray-light text-gray border-primary pb-1 focus:ring-transparent focus:border-b-primary-dark focus:border-b-2 rounded-t w-[70%] py-2 pl-3" placeholder="請填寫套票描述（限 100 字）"></textarea>
+              </fieldset>
+          </div>
+          <div class="lg:text-right">
+            <button type="submit" class="w-full lg:w-auto bg-primary text-white py-2 px-10 rounded hover:bg-primary-dark active:bg-opacity-80 disabled:bg-opacity-30">新增套票</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    <section class="bg-[#F7F7F7] pt-14 pb-32">
+      <div class="container">
+        <form action="" class="mb-14 max-w-[80vw] md:max-w-none mx-auto">
+          <fieldset class="flex justify-center md:justify-start items-center gap md:push-1/12">
+            <select aria-label="location" name="location" id="location" class="border-[#CED4DA] rounded text-gray w-1/2 md:w-3/12 focus:ring-primary focus:border-secondary">
+              <option value="" disabled selected>地區搜尋</option>
+                      <option value="全部">全部</option>
+                      <option value="台北">台北</option>
+                      <option value="台中">台中</option>
+                      <option value="高雄">高雄</option>
+            </select>
+            <p class="text-gray w-1/2 md:w-2/12" id="filterResult"></p>
+          </fieldset>
+        </form>
+          <ul class="flex flex-col md:flex-row md:flex-wrap justify-center items-center md:items-stretch gap" id="list">
+            <!-- <li class="bg-white shadow rounded border border-[#DEE2E6] w-4/12 max-w-[350px]">
+              <div class="relative">
+                <picture class="relative">
+                  <source media="(min-width: 768px)" srcset="./src/images/photo-ticket01.png">
+                  <img src="./src/images/photo-ticket01@2x.png" alt="ticket01">
+                </picture>
+                <span class="absolute top-0 -translate-y-1/3 bg-secondary text-white py-2 px-5 rounded-r">台北</span>
+                <span class="absolute bottom-0 translate-y-1/2 bg-primary text-white py-1 px-2">8.6</span>
+              </div>
+              <div class="p-5">
+                <h2 class="text-primary border-bottom border-primary font-medium text-2xl pb-1 border-b-2 mb-4">綠島自由行套裝行程</h2>
+                <p class="text-gray mb-6">嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。</p>
+                <div class="flex justify-between items-center text-primary">
+                  <div class="flex items-center">
+                    <i class="bi bi-exclamation-circle-fill mr-2"></i>
+                    <p class="font-medium">剩下最後 8 組</p>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="text font-medium mr-1">TWD</span>
+                    <span class="text-2xl font-roboto font-medium">$1,280</span>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
