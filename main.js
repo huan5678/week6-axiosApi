@@ -1,4 +1,4 @@
-
+import axios from "axios";
 const list = document.querySelector("#list");
 const selectFilter = document.querySelector("#location");
 const ticketForm = document.querySelector("#ticketForm");
@@ -120,14 +120,19 @@ const init = () => {
     )
     .then((res) => {
       data = res.data.data;
-      console.log(data);
+
       filterResult.innerHTML = `本次搜尋共 ${data.length} 筆資料`;
       let localData;
-      if (localStorage.getItem("ticketData")) {
-        localData = JSON.parse(localStorage.getItem("ticketData"));
+      localData = JSON.parse(localStorage.getItem("ticketData"));
+      if (localData === null) {
+        localData = [];
+        localData.length = 0;
+      }
+      if (localData.length > data.length) {
         render(localData);
       } else {
         render(data);
+        store(data);
       }
     });
 };
